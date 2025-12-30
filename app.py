@@ -23,7 +23,7 @@ def preprocess_review(review):
 def predict_sentiment(review):
   preprocess_input = preprocess_review(review)
   prediction = model.predict(preprocess_input)
-  if prediction > 0.7:
+  if prediction > 0.8:
     return "Positive", prediction[0][0]
   else:
     return "Negative", prediction[0][0]
